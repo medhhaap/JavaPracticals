@@ -9,12 +9,10 @@ class Employee {
         this.id = id;
         this.name = name;
     }
-
     double calculateSalary() {
         return salary;
     }
 }
-
 class FullTimeEmployee extends Employee {
     double basicPay, allowance;
 
@@ -23,14 +21,12 @@ class FullTimeEmployee extends Employee {
         this.basicPay = basicPay;
         this.allowance = allowance;
     }
-
     @Override
     double calculateSalary() {
         salary = basicPay + allowance;
         return salary;
     }
 }
-
 class PartTimeEmployee extends Employee {
     int hoursWorked;
     double hourlyRate;
@@ -49,11 +45,8 @@ public class payrollSystem {
     public static void main(String[] args) {
         Employee e1 = new FullTimeEmployee(1, "Kim's", 70000, 2000);
         Employee e2 = new PartTimeEmployee(2, "Seok's", 80, 200);
-        Employee e3 = new FullTimeEmployee(1, "Jin's", 5000, 90);
 
         System.out.println(e1.name + " Salary: " + e1.calculateSalary());
         System.out.println(e2.name + " Salary: " + e2.calculateSalary());
-        System.out.println(e3.name + " Salary: " + e3.calculateSalary());
     }
 }
-
