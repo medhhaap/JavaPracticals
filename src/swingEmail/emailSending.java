@@ -62,7 +62,7 @@ public class EmailsSender extends JFrame {
                     props.put("mail.smtp.auth", "true");
                     props.put("mail.smtp.starttls.enable", "true");
 
-                    // Add proper authentication (username & password)
+
                     Session session = Session.getInstance(props, new Authenticator() {
                         protected PasswordAuthentication getPasswordAuthentication() {
                             return new PasswordAuthentication("sujita.ghlan34@gmail.com", "sulm wpxh wmys rcko");
